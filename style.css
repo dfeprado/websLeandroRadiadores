@@ -1,0 +1,52 @@
+/* definição genérica */
+.lr-section-intro {
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.lr-section-intro > div {height: 100%;}
+.lr-section-intro .lr-modal{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.lr-section-intro h1 {
+    color:white;
+    font-size: 4em;
+    text-shadow: 3px 3px 10px black, -3px -3px 10px black;
+    width:90%;
+}
+
+/* Definição para telas médias (tablet) */
+@media screen and (max-width: 992px)
+{
+    .lr-section-intro {
+        height:400px;
+        background-image: url('./resources/fotoOficina1.jpg');
+    } .lr-section-intro h1 {font-size: 2em;}
+}
+
+/* Definição para telas pequenas (smartphones) */
+@media screen and (max-width: 600px)
+{
+        .lr-section-intro {height: 300px; background-image:none;};
+        .lr-section-intro h1 {font-size: 2em;}
+}
+
+/* Definição para telas grandes */
+@media screen and (min-width: 993px)
+{
+    .lr-section-intro {
+        height: 500px;
+        background-image: url('./resources/fotoOficina1.jpg');
+    }
+    .lr-section-intro h1 {font-size: 3em}
+
+    .lr-display-from-middle {transform: translate(-60%, -80%);}
+}
+
+/* animações */
+.lr-animate-height {animation: lrAnimateHeight 1s} @keyframes lrAnimateHeight {from{height:0} to{height:auto}}

@@ -1,0 +1,183 @@
+<html lang="pt-br">
+    <!-- cabeçalho -->
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="./w3.css" type="text/css">
+        <link rel="stylesheet" href="./style.css" type="text/css">
+        <!-- <link rel="stylesheet" href="./debug.css" type="text/css"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <script src="./controller.js"></script>
+    </head>
+
+    <!-- Corpo do site -->
+    <body>
+        <!-- menu mobile -->
+        <div class="w3-modal">
+            <div class="w3-modal-content">
+                <button class="w3-button w3-display-topright" id="btnFecharMenuMobile">X</button>
+                <ul class="w3-ul">
+                    <li></li>
+                    <li><a secao="secaoDescricaoServicos" class="lr-menu-item">Serviços</a></li>
+                    <li><a secao="secaoContatos" class="lr-menu-item">Contatos</a></li>
+                    <li><a secao="secaoSobreLeandroRadiadores" class="lr-menu-item">Sobre a Leandro Radiadores</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Logotipo e navegação -->
+        <header class="w3-container w3-cell-row w3-black w3-padding">
+            <div class="w3-cell w3-cell-middle">
+                <a onClick="window.scroll({top:0,left:0,behavior:'smooth'})" class="w3-btn">
+                    <img src="./resources/logo.png" style="width:150px;height:auto;"/>
+                </a>
+            </div>
+            <div class="w3-cell w3-cell-middle w3-bar w3-hide-medium w3-hide-small debug dred">
+                <a secao="secaoSobreLeandroRadiadores" class="w3-bar-item w3-button w3-right lr-menu-item">Sobre a Leandro Radiadores</a>
+                <a secao="secaoContatos" class="w3-bar-item w3-button w3-right lr-menu-item">Contatos</a>
+                <a secao="secaoDescricaoServicos" class="w3-bar-item w3-button w3-right lr-menu-item">Serviços</a>
+            </div>
+            <div class="w3-cell w3-cell-middle w3-hide-large w3-right">
+                <button class="w3-button" id="btnAbrirMenuMobile">Menu Mobile</button>
+            </div>
+        </header>
+
+        <!-- Apresentação da empresa -->
+        <section class="w3-row debug lr-section-intro">
+            <div class="lr-modal"></div>
+            <div class="w3-center w3-col l8 s12 m12 w3-right w3-display-container debug dred">
+                <h1 class="w3-display-middle lr-display-from-middle debug">
+                    Atendimento especializado e de qualidade para você e seu carro.
+                </h1>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section class="w3-container debug w3-hide">
+            <ul class="w3-ul">
+                <li>Recondicionamento de radiador</li>
+                <li>Troca de radiador</li>
+                <li>Mecânica em geral</li>
+                <li>Retífica de cabeçote</li>
+            </ul>
+            <div class="w3-row w3-hide">
+                <div class="w3-col l6 m6 s12 debug dred">Recondicionamento de radiador</div>
+                <div class="w3-col l6 m6 s12 debug dred">Troca de radiador</div>
+                <div class="w3-col l6 m6 s12 debug dred">Mecânica em geral</div>
+                <div class="w3-col l6 m6 s12 debug dred">Retífica de cabeçote</div>
+            </div>
+        </section>
+
+        <!-- Descrição dos serviços -->
+        <section class="w3-container w3-indigo debug" id="secaoDescricaoServicos">
+            <div class="w3-center">
+                <h1>Serviços oferecidos</h1>
+                <p class="w3-small">Clique no serviço para saber mais.</p>
+            </div>
+            <article>
+                <h2 id="servicoRecondicionamentoRadiador" class="lr-servico">Recondicionamento de radiador</h2>
+                <section class="w3-container w3-hide w3-animate-opacity debug dred">
+                    <p>O radiador é o responsável por fazer a troca de calor do líquido de arrefecimento. Ele é composto por colméia, caixas laterais e núcleo. Há casos em que o conserto da peça é possível e assim se reduz o valor do serviço.</p>
+                    <p>A Leandro Radiadores oferece a maior qualidade da região para o serviço de conserto do seu radiador.</p>
+                </section>
+            </article>
+            <article>
+                <h2 id="servicoTrocaRadiador" class="lr-servico">Troca de Radiador</h2>
+                <section class="w3-container w3-hide w3-animate-opacity">
+                    <p>Quando o conserto do radiador não é possível, a troca é a solução. A Leandro Radiadores faz a troca por um novo, seja nacional ou importado.</p>
+                </section>
+            </article>
+            <article>
+                <h2 id="servicoMecanicaGeral" class="lr-servico">Mecânica em geral</h2>
+                <section class="w3-container w3-hide w3-animate-opacity">
+                    <p>Reparo e manutenção no seu auto, como troca de óleo/filtro, troca de instalação de correia dentada, rolamento de rodas, buchas, freios e muito mais.</p>
+                </section>
+            </article>
+            <article>
+                <h2 id="servicoRetificaCabecote" class="lr-servico">Retífica de cabeçote</h2>
+                <section class="w3-container w3-hide w3-animate-opacity">
+                    <p>A queima do cabeçote ocorre pelo superaquecimento do motor. A Leandro Radiadores faz a retífica do cabeçote do seu veículo.</p>
+                </section>
+            </article>
+        </section>
+
+        <!-- Contatos -->
+        <section class="w3-container w3-black w3-cell-row" id="secaoContatos">
+            <!-- telefone, e-Mail e mídias sociais -->
+            <article class="w3-cell w3-cell-middle w3-mobile debug dred">
+                <h1>Contatos</h1>
+                <p><strong>Telefone fixo: </strong>(11) 3964-6642</p>
+                <p><strong>Telefone celular <span class="w3-tiny">(VIVO)</span>:</strong> (11) 99960-3044</p>
+                <p><strong>e-Mail:</strong> guarani@leandroradiadores.com.br</p>
+                <div class="w3-col l6 m6 s6 w3-center debug dyel">
+                    <p>
+                        <a href="https://facebook.com/automecanicaleandroradiadores" target="_blank">
+                            <img src="./resources/fb.png" class="w3-image" style="max-width:100px"/>
+                        </a>
+                    </p>
+                </div>
+                <div class="w3-col l6 m6 s6 w3-center debug dyel">
+                    <p>
+                        <a href="https://www.youtube.com/channel/UCHTR0e6CSwh59O3LVzzgt1w" target="_blank">
+                            <img src="./resources/youtube.png" class="w3-image" style="max-width:100px"/>
+                        </a>
+                    </p>
+                </div>
+            </article>
+
+            <!-- Endereço e Mapa -->
+            <article class="w3-container w3-padding w3-cell w3-cell-middle w3-mobile l6 m12 s12 w3-center debug dred">
+                <h1>Endereço</h1>
+                <p><strong>Rua Boaventura Pereira Neto, número 30</strong></p>
+                <p>Ponte São João, Jundiaí/SP</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1833.776944974062!2d-46.87591408921213!3d-23.186476661561688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9904ae73dfa7b0ff!2sAuto+Mec%C3%A2nica+Leandro+Radiadores!5e0!3m2!1spt-BR!2sbr!4v1564163928935!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="350"
+                    frameborder="0"
+                    style="border:0"
+                    style="width:100%"
+                    allowfullscreen>
+                </iframe>
+            </article>
+        </section>
+
+        <!-- Sobre a Leandro Radiadores -->
+        <section class="w3-container debug" id="secaoSobreLeandroRadiadores">
+            <h1>Sobre a Leandro Radiadores</h1>
+            <articicle>
+                <h2>História da Leandro Radiadores</h2>
+                <p>Fundada em 26/09/2009 pelo mecânico Leandro, especialista em radiadores com 36 anos de experiência.</p>
+                <p>No início a oficina se restringia a serviços de recondicionamento e troca de radiadores - nacionais e importados, e limpeza e tratamento de sistemas de arrefecimento. Em meados de 2016 começou a oferecer serviços de mecânica geral, como retífica de cabeçotes, troca de correias, disco de freios, rolamentos de rodas e muito mais.</p>
+                <p>Hoje, com <span id="idadeOficina">X</span> anos de existência, a oficina continua aprimorando o atendimento, sempre se especializando para oferecer um atendimento com a melhor qualidade da região.</p>
+            </articicle>
+
+            <articicle>
+                <h2>Missão</h2>
+                <p>Prestar serviço de qualidade, com atendimento personalizado que se adeque ao cliente.</p>
+            </articicle>
+
+            <articicle>
+                <h2>Visão</h2>
+                <p>Nos tornar referência no segmento de mecânica de autos e radiador na região de Jundiaí, sempre aprimorando o serviço e o atendimento prestado.</p>
+            </articicle>
+
+            <articicle>
+                <h2>Valores</h2>
+                <ul>
+                    <li>Qualidade</li>
+                    <li>Foco</li>
+                    <li>Agilidade</li>
+                    <li>Honestidade</li>
+                    <li>Transparência</li>
+                </ul>
+            </articicle>
+        </section>
+        <!-- Rodapé -->
+
+        <footer class="w3-container w3-center w3-black debug dred">
+            <p>Leandro Radiadores (2006 - <span id="anoAtual">X</span>)</p>
+            <p class="w3-small">É vetada a cópia de qualquer material contido nesse site. Todos os direitos reservados.</p>
+        </footer>
+
+    </body>
+</html>
