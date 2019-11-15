@@ -1,5 +1,6 @@
 import 'dart:html';
 
+import 'classes/MobileMenu.dart';
 import 'classes/TopicoServico.dart';
 import 'classes/ToolBar.dart';
 import 'classes/SectionNavigator.dart';
@@ -16,17 +17,25 @@ void main() {
   // configuração de ações de navegações e menus
   // cria os navegadores de seções
   SectionNavigator.sections['serviços'] = 
-    SectionNavigator(window.document.querySelector('#secaoDescricaoServicos').offsetTop - navBar.height*2);
+    SectionNavigator('#secaoDescricaoServicos', navBar);
 
   SectionNavigator.sections['contatos'] = 
-    SectionNavigator(window.document.querySelector('#secaoContatos').offsetTop - navBar.height);
+    SectionNavigator('#secaoContatos', navBar);
 
   SectionNavigator.sections['sobre'] = 
-    SectionNavigator(window.document.querySelector('#secaoSobreLeandroRadiadores').offsetTop - navBar.height);
+    SectionNavigator('#secaoSobreLeandroRadiadores', navBar);
 
   // Menu do desktop
   DesktopMenu desktopMenu = DesktopMenu(SectionNavigator.sections);
 
   // Menu do mobile
+  MobileMenu mobileMenu = MobileMenu(SectionNavigator.sections);
+
+  // datas
+  DateTime hoje = DateTime.now();
+  Duration existencia = hoje.difference(DateTime(2009, 09, 26));
+
+  window.document.querySelector('#idadeOficina').innerText = (existencia.inDays/365).round().toString();
+  window.document.querySelector('#anoAtual').innerText = hoje.year.toString();
 
 }
