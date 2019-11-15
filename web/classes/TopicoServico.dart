@@ -8,10 +8,9 @@ class TopicoServico {
 
   void _ToggleHidden(MouseEvent e) {
     // Esse trecho garante que apenas um tópico ficará aberto por vez!
-    TopicoServico.topicos.forEach((TopicoServico t) {
-      if (t.IsOpen && t != this) t.Toggle();
-    });
-
+    TopicoServico.topicos.where((TopicoServico t) => t != this).
+      forEach((TopicoServico t) => t.IsOpen ? t.Toggle() : null);
+      
     // abre/fecha o tópico
     this.Toggle();
   }

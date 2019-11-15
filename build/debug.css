@@ -1,0 +1,8 @@
+.debug {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.dred { border-color: red}
+.dyel {border-color: yellow;}
